@@ -1,20 +1,19 @@
-const operator = prompt("Please enter the operator you want to perform")
-const number1 = prompt("Please enter the first number")
-const number2 = prompt("Please enter the second number")
+const operator = prompt("Please enter the operator you want to perform");
+let number1 = prompt("Please enter the first number");
+let number2 = prompt("Please enter the second number");
 
-if (operator== '+') {
-    let result = number1 + number2;
+if (operator == '+') {
+    var result = +number1 + +number2;
 }
-else if (operator== '-') {
-    let result = number1 - number2;
+else if (operator == '-') {
+    var result = +number1 - +number2;
 }
-else if (operator== '*') {
-    let result = number1 * number2;
+else if (operator == '*') {
+    var result = +number1 * +number2;
 }
-else if (operator== '/') {
-    let result = number1 / number2;
+else if (operator == '/') {
+    var result = +number1 / +number2;
+} else {
+    alert("Enter the correct operator");
 }
-else {
-    console.log("Enter the correct operator");
-}
-alert('Your result is ${result}');
+alert('Your result is ' + result);
